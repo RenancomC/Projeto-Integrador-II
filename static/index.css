@@ -1,0 +1,391 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover;
+  /* Faz com que a imagem ocupe a tela toda */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Evita que a imagem se repita */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.image.active {
+  opacity: 1;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  /* Inicialmente invisíveis */
+  transition: opacity 0.3s ease;
+  /* Transição suave */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Mostrar botões quando o mouse estiver sobre a container */
+.container:hover .button {
+  opacity: 1;
+  /* Torna visíveis ao passar o mouse */
+}
+
+#body303 {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Container principal */
+.container303 {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+}
+
+/* Retângulo do Versículo */
+.versiculo-container303 {
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: -170px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Linha vertical */
+.linha-vertical303 {
+  border-left: 2px solid #000000;
+  margin: 0 15px;
+  height: auto;
+  margin-left: -500px;
+}
+
+/* Estilos do título Versículo do Dia */
+.titulo303 {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos do subtítulo e texto */
+.subtitulo303 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.texto303 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Linha horizontal */
+.linha-horizontal303 {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+/* Botões */
+.botoes303 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botao303 {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-ver303 {
+  background-color: #2196f3;
+  /* Azul */
+}
+
+.botao303:hover {
+  opacity: 0.9;
+}
+
+/* Estilos do título Nosso Propósito */
+.proposito-container303 {
+  padding: 10px;
+  width: 60%;
+}
+
+.proposito-titulo303 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+
+/* Parágrafo do propósito */
+.proposito-texto303 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  width: 600px;
+  text-align: justify;
+}
+
+.retangulo {
+  display: flex;
+  width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #ffffffcd;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+  /* Sombra */
+  margin-bottom: 100px;
+}
+
+/* Lado esquerdo (texto) */
+.conteudo-texto {
+  flex: 1;
+  padding-right: 30px;
+}
+
+/* Estilo do título e do parágrafo */
+.titulo {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+  /* Sombra do texto */
+}
+
+.texto {
+  font-size: 20px;
+  color: #555;
+  text-align: justify;
+}
+
+/* Lado direito (imagem) */
+.conteudo-imagem {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Botões sobre a imagem */
+.botoes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.botao {
+  width: 50px;
+  height: 50px;
+  background-color: #f2f840b5;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Mostrar botões ao passar o mouse */
+.conteudo-imagem:hover .botoes {
+  opacity: 1;
+}
+
+/* Alterar cor do botão ao passar o mouse */
+.botao:hover {
+  background-color: #636605;
+  /* Azul */
+  color: rgb(255, 255, 255);
+}
+
+.container101 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+  background-color: #ffffffcd;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 35px;
+  margin: 0;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #b1adad;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 20px;
+  color: #555;
+  margin: 20px 0;
+}
+
+.buttons101 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.button101 {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button101:hover {
+  background-color: #45a049;
+}
+
+/* Estilo do conteúdo adicional */
+.extra-content101 {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.extra-content101 h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.extra-content101 p {
+  font-size: 16px;
+  color: #555;
+}
+
+.extra-button101 {
+  bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.extra-button101:hover {
+  background-color: #0056b3;
+}

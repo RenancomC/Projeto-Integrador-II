@@ -1,0 +1,76 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>BIBLIA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='panorama.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+<div class="baseDeFundo">
+  <div class="container">
+    <h1 class="title">PANORAMA BÍBLICO</h1>
+  </div>
+
+  <div class="button-container">
+    <!-- Botões para exibir o retângulo com o conteúdo -->
+    <button id="button101" onclick="toggleRectangle('rect1', 'rect2')">Aula 1</button>
+    <button id="button202" onclick="toggleRectangle('rect2', 'rect1')">Aula 2</button>
+  </div>
+
+  <!-- Retângulo que será exibido pelo botão "aula 1" -->
+  <div id="rect1" class="rectangle">
+    <div class="container">
+      <div class="content">
+        <!-- titulo da primeira aula -->
+        <h3>Panorama Bíblico do Antigo Testamento</h3>
+      </div>
+      <div class="content">
+        <p>O Antigo Testamento é a primeira seção da Bíblia e compõe um vasto panorama que narra a criação do mundo, a formação do povo de Israel e a revelação de Deus através de leis, profetas e eventos históricos. Composto por 39 livros, o Antigo Testamento abrange desde a criação, descrita no livro de Gênesis, até o retorno do povo de Israel do exílio na Babilônia, abordado em Esdras e Neemias. Esses livros são divididos em várias seções principais: a Torá (ou Pentateuco), os Livros Históricos, os Poéticos e Sapienciais, e os Proféticos, cada qual desempenhando um papel importante na estruturação da fé judaica e cristã.</p>
+      </div>
+      <div class="content">
+        <p>A criação e a queda do homem são descritas em Gênesis, onde Deus forma o universo e o ser humano, e estabelece uma relação de proximidade com sua criação (Gênesis 1-2). No entanto, a desobediência de Adão e Eva traz consequências para toda a humanidade (Gênesis 3). Ao longo dos capítulos, vemos o início da história da salvação, com a promessa feita a Abraão de que sua descendência formaria um grande povo (Gênesis 12:1-3). Essa promessa é central para o desenvolvimento do Antigo Testamento, já que gera a linhagem de Israel e prefigura a vinda de Jesus Cristo, como apontado no Novo Testamento.</p>
+      </div>
+      <div class="content">
+        <p>Os livros de Êxodo, Levítico, Números e Deuteronômio compõem a Torá e retratam a libertação do povo hebreu da escravidão no Egito, a aliança de Deus com Israel no Monte Sinai e a entrega dos Dez Mandamentos (Êxodo 20). Esse período é fundamental, pois Deus não só revela sua santidade e justiça, mas também apresenta leis e preceitos que orientam o povo a viver em santidade. Esses livros mostram o relacionamento direto e cuidadoso de Deus com Israel, escolhendo-o como nação e estabelecendo-o como Seu povo em uma terra prometida.</p>
+      </div>
+      <div class="content">
+        <p>Os Livros Históricos, que incluem Josué, Juízes, Samuel e Reis, registram a ocupação da Terra Prometida e os desafios enfrentados pelo povo de Israel. Durante o período dos juízes e dos reis, vemos uma oscilação entre fidelidade e infidelidade a Deus. Um dos marcos dessa era é o reinado de Davi, que estabelece Jerusalém como a capital e centro espiritual de Israel (2 Samuel 5:6-7). Esse período revela como o sucesso ou fracasso de Israel dependia de sua fidelidade a Deus e de sua obediência às leis estabelecidas.</p>
+      </div>
+      <div class="content">
+        <p>A seção poética e sapiencial do Antigo Testamento inclui livros como Salmos, Provérbios e Eclesiastes, que oferecem conselhos práticos, reflexões profundas e louvores a Deus. O livro de Salmos, por exemplo, contém cânticos e orações que expressam adoração, gratidão e súplica ao Senhor. Essas poesias não apenas refletem a busca humana por Deus, mas também revelam a resposta divina às necessidades espirituais, emocionais e éticas do ser humano. Em Provérbios e Eclesiastes, encontramos ensinamentos sobre a sabedoria divina e a importância de uma vida centrada na reverência a Deus (Provérbios 1:7).</p>
+      </div>
+      <div class="content">
+        <p>Por fim, os Profetas – divididos em profetas maiores (como Isaías, Jeremias e Ezequiel) e menores (como Amós, Miquéias e Malaquias) – denunciam as injustiças sociais, a idolatria e o afastamento do povo em relação a Deus. Por meio desses profetas, Deus chama Israel ao arrependimento e promete um futuro redentor. A mensagem profética também antecipa a vinda de um Messias que restaurará a aliança entre Deus e a humanidade, promessa que ecoa no Novo Testamento (Isaías 53:5). Esse panorama mostra que, desde a criação até as profecias messiânicas, o Antigo Testamento forma uma narrativa contínua da fidelidade de Deus e da preparação para o cumprimento de Suas promessas em Cristo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Retângulo que será exibido pelo botão "aula 2" -->
+  <div id="rect2" class="rectangle">
+    <div class="container">
+      <div class="content">
+        <!-- titulo da segunda aula -->
+        <h3>Panorama Bíblico do Novo Testamento</h3>
+      </div>
+      <div class="content">
+        <p>O Novo Testamento, a segunda parte da Bíblia cristã, é uma coleção de 27 livros que narram a vida, a mensagem e os ensinamentos de Jesus Cristo, bem como o desenvolvimento da Igreja Primitiva. Esses textos, escritos entre o século I e início do século II d.C., revelam a promessa cumprida da vinda do Messias e a extensão da salvação a todos os povos. Desde o evangelho de Mateus até o livro de Apocalipse, o Novo Testamento fornece uma compreensão profunda do ministério de Cristo e de como ele transformou o relacionamento entre Deus e a humanidade.</p>
+      </div>
+      <div class="content">
+        <p>Os quatro evangelhos — Mateus, Marcos, Lucas e João — são o núcleo do Novo Testamento, pois relatam a vida e o ministério de Jesus. Cada evangelho possui um enfoque particular: Mateus, por exemplo, enfatiza Jesus como o Rei prometido de Israel; Marcos destaca sua autoridade e poder; Lucas foca na humanidade de Cristo e sua compaixão pelos marginalizados; e João apresenta Jesus como o Filho de Deus, enfatizando a divindade e a relação entre Pai e Filho (João 1:1-14). Juntos, os evangelhos nos oferecem uma visão completa de quem Jesus era e de como ele mudou a história.</p>
+      </div>
+      <div class="content">
+        <p>Além dos evangelhos, o livro de Atos dos Apóstolos narra o surgimento e a expansão da Igreja Primitiva após a ascensão de Jesus. Atos revela o trabalho do Espírito Santo na vida dos apóstolos, especialmente de Pedro e Paulo, enquanto disseminavam a mensagem de Cristo por todo o Império Romano (Atos 1:8). Esse livro destaca o cumprimento da Grande Comissão (Mateus 28:19-20), a inclusão dos gentios na comunidade cristã e a formação das primeiras igrejas, demonstrando como o cristianismo deixou de ser um movimento local para se tornar uma fé global.</p>
+      </div>
+      <div class="content">
+        <p>As cartas, ou epístolas, formam a maior parte do Novo Testamento, sendo 13 delas atribuídas ao apóstolo Paulo. Esses textos abordam questões teológicas e práticas enfrentadas pelas igrejas e seus membros, tratando de temas como a salvação pela fé, a unidade da igreja e o papel do Espírito Santo na vida do crente (Romanos 8; Efésios 2:8-9). Escritas para diferentes comunidades cristãs, as epístolas são uma fonte de orientação espiritual e doutrinária para a igreja ao longo dos séculos.</p>
+      </div>
+      <div class="content">
+        <p>As cartas, ou epístolas, formam a maior parte do Novo Testamento, sendo 13 delas atribuídas ao apóstolo Paulo. Esses textos abordam questões teológicas e práticas enfrentadas pelas igrejas e seus membros, tratando de temas como a salvação pela fé, a unidade da igreja e o papel do Espírito Santo na vida do crente (Romanos 8; Efésios 2:8-9). Escritas para diferentes comunidades cristãs, as epístolas são uma fonte de orientação espiritual e doutrinária para a igreja ao longo dos séculos.</p>
+      </div>
+      <div class="content">
+        <p>O panorama bíblico do Novo Testamento, portanto, revela a profundidade do amor de Deus pela humanidade e o impacto transformador da obra de Jesus. Ao estudar esses livros, os cristãos são encorajados a viver de acordo com os ensinamentos de Cristo, aguardando a sua segunda vinda com fé e esperança. O Novo Testamento não apenas descreve os eventos históricos e as doutrinas fundamentais da fé cristã, mas também convida cada leitor a experimentar uma relação pessoal e transformadora com Deus por meio de Jesus Cristo (João 3:16).</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

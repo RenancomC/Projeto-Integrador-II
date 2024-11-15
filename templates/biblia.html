@@ -1,0 +1,34 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>BIBLIA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='biblia.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+
+<div class="baseDeFundo">
+  <h1>Leitura da Bíblia</h1>
+
+  <!-- Botões para escolher o testamento -->
+  <div>
+    <button id="antigoTestamentoBtn">Antigo Testamento</button>
+    <button id="novoTestamentoBtn">Novo Testamento</button>
+  </div>
+
+  <!-- Formulário de seleção do livro e capítulo -->
+  <form id="bibleForm">
+    <label for="livro">Livro:</label>
+    <select id="livro" disabled required>
+      <!-- Lista de livros será escolhida conforme o testamento escolhido -->
+    </select>
+
+    <label for="capitulo">Capítulo:</label>
+    <input type="text" id="capitulo" placeholder="Ex: 3" required>
+
+    <button type="submit">Buscar</button>
+  </form>
+
+  <div id="resultado"></div>
+</div>
+{% endblock %}

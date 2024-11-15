@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover;
+  /* Faz com que a imagem ocupe a tela toda */
+  background-position: center;
+  /* Centraliza a imagem */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+#button101 {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#button202 {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rectangle {
+  width: 850px;
+  height: auto;
+  margin-top: 20px;
+  display: none;
+  /* Começa oculto */
+}

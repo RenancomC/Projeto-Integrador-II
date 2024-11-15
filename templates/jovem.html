@@ -1,0 +1,33 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='jovem.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+<div class="baseDeFundo">
+  <div class="container">
+    <!-- titulo da página -->
+    <h1 class="title">MINISTÉRIO DOS JOVENS</h1>
+
+    <div class="content">
+      <p>O ministério de jovens é essencial para o crescimento espiritual e a vitalidade de uma igreja. Ele oferece um espaço para que os jovens possam se conectar com sua fé de uma maneira mais profunda e pessoal, criando um ambiente onde eles possam explorar questões espirituais, fazer amizades e desenvolver um relacionamento íntimo com Deus. Esse ministério é um meio importante para ensinar os princípios bíblicos de forma que ressoem com as preocupações, dúvidas e necessidades dessa faixa etária, ajudando-os a aplicar a fé no contexto de suas vidas cotidianas.</p>
+      <img src="{{ url_for('static', filename='images/bibliaJovem.png') }}" alt="Descrição da imagem direita">
+    </div>
+
+    <div class="content">
+      <p>Além disso, o ministério de jovens desempenha um papel crucial na formação de líderes dentro da igreja. Ao proporcionar treinamento e oportunidades de servir, ele prepara a próxima geração para assumir papéis de liderança na comunidade e na igreja. Jovens que participam ativamente de atividades como grupos de estudo bíblico, cultos, e ações sociais ganham confiança, desenvolvem habilidades de liderança e aprendem a responsabilidade de cuidar de outros, sendo moldados para o ministério em diversas áreas.</p>
+    </div>
+
+    <div class="content">
+      <img src="{{ url_for('static', filename='images/zjovens.jpg') }}" alt="Descrição da imagem esquerda">
+      <p>A inclusão dos jovens também garante que a igreja se mantenha atualizada e conectada com as questões que eles enfrentam, como pressão social, questões emocionais, e desafios relacionados à identidade. O ministério de jovens proporciona um apoio emocional e espiritual importante nesse período da vida, promovendo discussões abertas e saudáveis sobre problemas contemporâneos enquanto fundamenta esses debates na palavra de Deus. Além disso, a Igreja pode usar os jovens como agentes de mudança, motivando-os a serem influências positivas em suas escolas, comunidades e até em suas famílias.</p>
+    </div>
+
+    <div class="content">
+      <p>Finalmente, o ministério de jovens é vital para garantir a continuidade da igreja e da fé. Quando os jovens se sentem acolhidos e valorizados, há uma maior probabilidade de que continuem participando ativamente da vida da igreja ao longo da vida adulta. Este ministério, portanto, não só impacta os jovens diretamente, mas também fortalece a igreja como um todo, criando uma comunidade vibrante e cheia de energia, onde todas as gerações podem crescer juntas na fé e no serviço ao próximo.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>CURSO</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='curso.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+
+<div class="baseDeFundo">
+
+  <!-- titulo da página -->
+  <h1 style="margin-top: 50px; text-decoration: underline; font-size: 50px;">CURSOS BÁSICOS</h1>
+
+  <!-- primero botão -->
+  <button onclick="toggleRetangulo('retangulo1')" class="buttonX">COMO SER UM CRISTÃO</button>
+  <!-- conteúdo que será exibido -->
+  <div id="retangulo1" class="retangulo">
+    <div class="content">
+      <h4>NOME DO CURSO: Como ser uma Cristão<br>
+        AULAS: 1 aulas<br>
+        Sem Certificado</h4>
+    </div>
+    <div class="image-container">
+      <a href="/cristao"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+
+  <!-- segundo botão -->
+  <button onclick="toggleRetangulo('retangulo2')" class="buttonX">PANORAMA BÍBLICO</button>
+  <!-- conteúdo que será exibido -->
+  <div id="retangulo2" class="retangulo">
+    <div class="content">
+      <h4>NOME DO CURSO: Panorama bíblicos<br>
+        AULAS: 2 aulas<br>
+        Sem Certificado</h4>
+    </div>
+    <div class="image-container">
+      <a href="/panorama"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+
+  <!-- terceiro botão -->
+  <button onclick="toggleRetangulo('retangulo3')" class="buttonX">TEOLOGIA BÁSICA</button>
+  <!-- conteúdo que será exibido -->
+  <div id="retangulo3" class="retangulo">
+    <div class="content">
+      <h4>NOME DO CURSO: Teologia Básica<br>
+        AULAS: --- aula<br>
+        Sem Certificado</h4>
+    </div>
+    <div class="image-container">
+      <a href="#"><button class="more-info-button" style="color: red;">Insdisponível<br>(em produção)</button></a>
+    </div>
+  </div>
+
+  {% endblock %}

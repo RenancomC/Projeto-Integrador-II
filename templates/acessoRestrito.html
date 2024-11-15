@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("/static/images/fundo.jpg");
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-container input::placeholder {
+      color: #999;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #bbb;
+    }
+
+    .login-container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+    <div style="color: red; margin-top: -10px; margin-bottom: 5px;">
+      {% for msg in mensagens %}
+      {{ msg }}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <form action="autenticar" method="post">
+      <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required>
+      <div class="button-container">
+        <a href="/index" class="btn-back">Voltar</a>
+        <button type="submit">Entrar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

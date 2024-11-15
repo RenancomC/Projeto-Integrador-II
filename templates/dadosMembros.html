@@ -1,0 +1,38 @@
+{% extends 'base02.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title></title>
+<link rel="stylesheet" href="{{ url_for('static', filename='dadosMembros.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+
+<div class="baseDeFundo">
+  <h1 style="margin: 25px; text-decoration: underline;">LISTA DE MEMBROS CADASTRADOS</h1>
+
+  <ul>
+    {% for adulto in adultos %}
+    <li style="list-style-type: none; margin-left: -150px;">
+
+      <form action="/atualizar/{{ adulto.id }}" method="POST" style="display: inline; font-size: 20px;">
+        <label><b>Nome: </b></label><br>
+        <input type="text" name="nome" value="{{ adulto.nome }}" style="height: auto; width: 400px; font-size: 20px;"><br>
+        <label><b>CPF: </b></label><br>
+        <input type="number" name="cpf" value="{{ adulto.cpf }}" style="height: auto; width: 400px; font-size: 20px;"><br>
+        <label><b>Contato: </b></label><br>
+        <input type="text" name="contato" value="{{ adulto.contato }}" style="height: auto; width: 400px; font-size: 20px;"><br>
+        <label><b>Endereço: </b></label><br>
+        <input type="text" name="endereco" value="{{ adulto.endereco }}" style="height: auto; width: 400px; font-size: 20px;"><br>
+        <button type="submit" style="font-size: 25px; margin: 20px 20px 0 0;">Atualizar</button>
+      </form>
+
+      <form action="/deletar/{{ adulto.id }}" method="POST" style="display: inline;"><button type="submit" style="font-size: 25px; margin: 20px 0 0 0 ;">Excluir</button></form>
+
+      <hr style="margin-top: 20px;">
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
+
+{% endblock %}

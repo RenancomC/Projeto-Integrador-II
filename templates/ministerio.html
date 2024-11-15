@@ -1,0 +1,71 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='ministerio.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+
+<div class="baseDeFundo">
+  <!-- titulo da página -->
+  <h1 style="margin-top: 50px; text-decoration: underline; font-size: 50px;">MINISTÉRIOS</h1>
+
+  <!-- primeiro botão -->
+  <button onclick="toggleRetangulo('retangulo1')" class="buttonA buttonX">MINISTÉRIO DE LOUVOR</button>
+  <div id="retangulo1" class="retangulo">
+    <!-- conteúdo que sera exibido -->
+    <div class="content">
+      <h3>Ministério de Louvor</h3>
+      <p>Nós, ministério de louvor, somos essenciais para edificar nossos espíritos, unir-nos em adoração e cultivar um ambiente onde podemos experimentar a presença de Deus juntos."</p>
+    </div>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='images/zlouvor.png') }}" alt="Imagem">
+      <a href="/louvor"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+
+  <!-- segundo botão -->
+  <button onclick="toggleRetangulo('retangulo2')" class="buttonB buttonX">MINISTÉRIO INFANTIL</button>
+  <div id="retangulo2" class="retangulo">
+    <!-- conteúdo que sera exibido -->
+    <div class="content">
+      <h3>Ministério Infantil </h3>
+      <p>Reconhecemos que o ministério infantil é fundamental para a formação espiritual das crianças, pois através dele, podemos cultivar a fé desde cedo e ensinar valores cristãos que acompanharão nossos pequenos ao longo de suas vidas.</p>
+    </div>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='images/zinfantil.png') }}" alt="Imagem">
+      <a href="infantil"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+
+  <!-- terceiro botão -->
+  <button onclick="toggleRetangulo('retangulo3')" class="buttonA buttonX">MINISTÉRIO DA MÍDIA</button>
+  <div id="retangulo3" class="retangulo">
+    <!-- conteúdo que sera exibido -->
+    <div class="content">
+      <h3> Minitério de mídia</h3>
+      <p>Nosso responsáveis para alcançar mais pessoas, compartilhar a mensagem do Evangelho e promover a comunhão entre os membros da nossa comunidade.</p>
+    </div>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='images/zmidia.png') }}" alt="Imagem">
+      <a href="/midia"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+
+  <!-- quarto botão -->
+  <button onclick="toggleRetangulo('retangulo4')" class="buttonB buttonX">MINISTÉRIO DOS JOVENS</button>
+  <div id="retangulo4" class="retangulo">
+    <!-- conteúdo que sera exibido -->
+    <div class="content">
+      <h3>Ministério Jovem</h3>
+      <p>Nosso fundamental para o crescimento espiritual da igreja, pois fortalece a fé dos jovens e os capacita a se tornarem líderes comprometidos com a sua comunidade.</p>
+    </div>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='images/zjovens.jpg') }}" alt="Imagem">
+      <a href="/jovem"><button class="more-info-button">Saiba mais</button></a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

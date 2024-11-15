@@ -1,0 +1,44 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>BIBLIA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='cristao.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+<div class="baseDeFundo">
+  <div class="container">
+    <h1 class="title">COMO SER UM CRISTÃO</h1>
+  </div>
+
+
+
+  <!-- Botão para exibir o retângulo com o conteúdo -->
+  <button id="showButton" onclick="showRectangle()">Aula 1</button>
+
+  <!-- Retângulo que será exibido -->
+  <div id="rectangle">
+    <div class="container">
+      <div class="content">
+        <p>Ser cristão é mais do que simplesmente professar uma crença. É um compromisso de vida baseado na fé em Jesus Cristo e na prática de seus ensinamentos. Segundo as Escrituras, o primeiro passo para ser cristão é reconhecer a necessidade de um relacionamento verdadeiro com Deus. Jesus afirmou: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai senão por mim" (João 14:6). Esta declaração enfatiza que a fé em Jesus é o fundamento essencial para uma vida cristã autêntica.</p>
+      </div>
+      <div class="content">
+        <p>A jornada de um cristão começa com a conversão e o arrependimento sincero. No livro de Atos, Pedro prega ao povo: "Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo para perdão dos pecados; e recebereis o dom do Espírito Santo" (Atos 2:38). O arrependimento envolve uma mudança de mente e coração, voltando-se para Deus e afastando-se de tudo o que nos separa Dele. Este passo é necessário para que possamos experimentar a transformação espiritual e a presença de Deus em nossas vidas.</p>
+      </div>
+      <div class="content">
+        <p>Além disso, ser cristão implica seguir o exemplo de Jesus no amor e no serviço ao próximo. Ele nos ensinou que o maior mandamento é: "Amarás o Senhor, teu Deus, de todo o teu coração, de toda a tua alma e de todo o teu entendimento. E o segundo é semelhante a ele: Amarás o teu próximo como a ti mesmo" (Mateus 22:37-39). Esse amor não deve ser apenas em palavras, mas em ações que demonstrem compaixão e empatia, especialmente com os mais necessitados e marginalizados.</p>
+      </div>
+      <div class="content">
+        <p>Outro aspecto importante é a oração e o estudo da Palavra de Deus. Um cristão busca orientação nas Escrituras e mantém comunhão com Deus através da oração. Em 2 Timóteo 3:16-17, Paulo afirma que "Toda a Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção e para a instrução na justiça, para que o homem de Deus seja perfeito e perfeitamente habilitado para toda boa obra." Ler a Bíblia e orar regularmente são práticas que fortalecem nossa fé e nos ajudam a discernir a vontade de Deus.</p>
+      </div>
+      <div class="content">
+        <p>Ser cristão também significa enfrentar desafios e carregar a própria cruz. Jesus advertiu seus seguidores que a vida cristã pode envolver sacrifícios: "Se alguém quer vir após mim, negue-se a si mesmo, tome a sua cruz e siga-me" (Mateus 16:24). Seguir a Cristo muitas vezes exige escolhas difíceis, mas é através dessas provações que nos tornamos mais fortes na fé e no caráter, lembrando sempre que Ele está ao nosso lado.</p>
+      </div>
+      <div class="content">
+        <p>Por fim, um cristão é chamado a testemunhar sua fé. O chamado à evangelização é essencial para quem vive uma vida cristã. Jesus ordenou aos seus discípulos: "Ide por todo o mundo e pregai o evangelho a toda criatura" (Marcos 16:15). Compartilhar as boas-novas do amor e da graça de Deus com os outros não é apenas uma responsabilidade, mas também uma expressão de gratidão por tudo o que recebemos de Deus. Dessa forma, podemos cumprir nossa missão e mostrar ao mundo o que significa ser verdadeiramente cristão.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

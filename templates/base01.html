@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--   bloco para adicinar o css e o nome da página -->
+  {% block estilo %}
+  {% endblock %}
+
+</head>
+
+<body>
+  <!-- menu da página -->
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/miniblog">MiniBlog</a>
+    <a href="/ministerio">Ministério</a>
+    <a href="/calendario">Calendário</a>
+    <a href="/mais">Mais</a>
+  </nav>
+
+  <!-- bloco de conteúdo das páginas -->
+  {% block conteudo %}
+  {% endblock %}
+
+  <!-- área para importar o javascript para cada página -->
+  <script src="{{ url_for('static', filename='biblia.js') }}"></script>
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+  <script src="{{ url_for('static', filename='ministerio.js') }}"></script>
+  <script src="{{ url_for('static', filename='calendario.js') }}"></script>
+  <script src="{{ url_for('static', filename='cristao.js') }}"></script>
+  <script src="{{ url_for('static', filename='panorama.js') }}"></script>
+  <script src="{{ url_for('static', filename='miniblog.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--   bloco para adicinar o css e o nome da página -->
+  {% block estilo %}
+  {% endblock %}
+
+</head>
+
+<body>
+
+  <h1 style="font-size: 80px; text-decoration: underline;">INFORMAÇÕES DA IGREJA</h1>
+  <div style="margin-bottom: 50px;">
+    <a href="/cadastroMembro"><button style="font-size: 25px;">Cadastrar Membro</button></a>
+    <a href="/dadosMembros"><button style="font-size: 25px;">Dados dos Membros</button></a>
+  </div>
+
+  {% block conteudo %}
+  {% endblock %}
+
+  <script src="{{ url_for('static', filename='cadastroMembro.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover;
+  /* Faz com que a imagem ocupe a tela toda */
+  background-position: center;
+  /* Centraliza a imagem */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.button img {
+  width: 50px;
+  /* Ajuste o tamanho do ícone */
+  height: 50px;
+}
+
+.line {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  margin: 5px 0;
+}

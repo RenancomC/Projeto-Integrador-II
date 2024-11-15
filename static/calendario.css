@@ -1,0 +1,162 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover;
+  /* Faz com que a imagem ocupe a tela toda */
+  background-position: center;
+  /* Centraliza a imagem */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+.calendar {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #a6a5a5;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.calendar-day.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.calendar-nav {
+  cursor: pointer;
+}
+
+.event-day {
+  background-color: #9bb611;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.event-day-2 {
+  background-color: #10c237;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.event-day-3 {
+  background-color: #cf1a50;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.event-day-4 {
+  background-color: #c9190c;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.event-day-5 {
+  background-color: #10ada0;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Estilo do retângulo azul com a imagem */
+.event-info {
+  display: none;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.event-info img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}

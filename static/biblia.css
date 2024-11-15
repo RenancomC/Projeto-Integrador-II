@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover; /* Faz com que a imagem ocupe a tela toda */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+button,
+select,
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+#resultado {
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+select:disabled {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,33 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='midia.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+<div class="baseDeFundo">
+  <div class="container">
+    <!-- titulo da página -->
+    <h1 class="title">MINISTÉRIO DE MÍDIA</h1>
+
+    <div class="content">
+      <p>O ministério de mídia é de grande importância para a igreja, pois permite uma comunicação mais eficaz e acessível com a comunidade e com o público externo. Em um mundo cada vez mais conectado digitalmente, a presença online da igreja é essencial para alcançar pessoas que talvez não pudessem participar fisicamente dos cultos ou eventos. A mídia, seja por meio de transmissões ao vivo, sites, redes sociais ou aplicativos, oferece uma plataforma para divulgar o evangelho e fortalecer a presença da igreja na vida das pessoas, proporcionando uma experiência interativa e dinâmica.</p>
+      <img src="{{ url_for('static', filename='images/zmidia.png') }}" alt="Descrição da imagem direita">
+    </div>
+
+    <div class="content">
+      <p>Além disso, o ministério de mídia permite a criação de conteúdos relevantes que auxiliam no crescimento espiritual e na edificação da igreja. Vídeos de pregações, devocionais, estudos bíblicos e outros recursos digitais podem ser disponibilizados para o público em qualquer momento, permitindo que os membros da igreja e visitantes se conectem com a palavra de Deus de maneira prática e acessível. A criação de conteúdos visuais impactantes também facilita a compreensão e o engajamento com a mensagem cristã, especialmente entre as gerações mais jovens, que estão imersas no universo digital.</p>
+    </div>
+
+    <div class="content">
+      <img src="{{ url_for('static', filename='images/equipamento.png') }}" alt="Descrição da imagem esquerda">
+      <p>Outro ponto importante é a capacidade da mídia de promover a inclusão e a diversidade dentro da igreja. O ministério de mídia pode criar espaços de acolhimento virtual para pessoas com necessidades especiais, oferecendo recursos como legendas em vídeos, interpretação de libras, ou adaptações em sites e aplicativos. Além disso, a mídia digital possibilita que igrejas de diferentes regiões do mundo se conectem, troquem experiências e compartilhem testemunhos de fé, promovendo uma igreja global unida pela mesma causa.</p>
+    </div>
+
+    <div class="content">
+      <p>Por fim, o ministério de mídia desempenha um papel fundamental na gestão de eventos e atividades da igreja, facilitando a divulgação e o engajamento. Calendários de eventos, campanhas de arrecadação, informações sobre grupos e ministérios podem ser facilmente compartilhados através de plataformas digitais, alcançando um público mais amplo e aumentando a participação nas iniciativas da igreja. Assim, o ministério de mídia se torna uma ferramenta indispensável para a missão evangelística e o fortalecimento da comunidade cristã, permitindo que a igreja cumpra sua missão de forma mais eficaz e moderna.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

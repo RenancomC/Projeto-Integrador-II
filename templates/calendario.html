@@ -1,0 +1,31 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>CALENDÁRIO</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='calendario.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+<div class="baseDeFundo">
+  <h1 style="text-decoration: underline; font-size: 50px;">Calendário</h1>
+  <div class="calendar">
+    <div class="calendar-header">
+      <span class="calendar-nav" id="prev-month">❮</span>
+      <h2 id="month-year"></h2>
+      <span class="calendar-nav" id="next-month">❯</span>
+    </div>
+    <div class="calendar-body" id="calendar-days">
+      <!-- dias quem vão ser inseridos -->
+    </div>
+  </div>
+
+  <!-- Retângulo que aparece com a imagem e o botão de fechar -->
+  <div class="event-info" id="event-info">
+    <button class="close-btn" id="close-btn">X</button>
+    <h3 id="event-title"></h3>
+    <a href="" id="event-link">
+      <img id="event-image" src="" alt="Evento">
+    </a>
+  </div>
+</div>
+{% endblock %}

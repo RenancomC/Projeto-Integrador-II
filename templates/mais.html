@@ -1,0 +1,42 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='mais.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+
+
+
+<div class="baseDeFundo">
+  <div class="container">
+
+    <!-- primeiro botão -->
+    <a href="/galeria">
+      <div class="button">
+        <img src="{{ url_for('static', filename='images/camera.png') }}" alt="Câmera">
+        <div class="line"></div>
+        <div>GALERIA</div>
+      </div>
+    </a>
+    <!-- segundo botão -->
+    <a href="/curso">
+      <div class="button">
+        <img src="{{ url_for('static', filename='images/pilhaLivros.png') }}" alt="Livro">
+        <div class="line"></div>
+        <div>CURSO</div>
+      </div>
+    </a>
+    <!-- terceiro botão -->
+    <a href="/biblia">
+      <div class="button">
+        <img src="{{ url_for('static', filename='images/livro.png') }}" alt="Bíblia">
+        <div class="line"></div>
+        <div>BÍBLIA</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

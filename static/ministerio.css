@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/fundo.jpg");
+  background-size: cover;
+  /* Faz com que a imagem ocupe a tela toda */
+  background-position: center;
+  /* Centraliza a imagem */
+}
+
+.baseDeFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+  border-radius: 50px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à direita */ -5px 0 10px rgba(0, 0, 0, 0.3),
+    /* Sombra à esquerda */ 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra embaixo */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: white;
+  padding: 28px 40px;
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  background-color: rgb(72, 72, 75);
+}
+
+.retangulo {
+  width: 600px;
+  height: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 255, 0);
+  color: rgb(0, 0, 0);
+  transition: opacity 0.5s ease, height 0.5s ease;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.retangulo.show {
+  height: auto;
+  opacity: 1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 0 0 0 30px;
+  border-left: 5px solid darkblue;
+  border-bottom: 5px solid darkblue;
+}
+
+.buttonX {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 650px;
+  height: 100px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.buttonA {
+  border-radius: 0 20px 0 20px;
+}
+
+.buttonB {
+  border-radius: 20px 0 20px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.more-info-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.more-info-button:hover {
+  background-color: darkblue;
+}

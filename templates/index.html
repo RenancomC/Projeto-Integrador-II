@@ -1,0 +1,102 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- conteúdo que será exibido -->
+<div class="baseDeFundo">
+  <!-- imagens/banner que transitam no início da página -->
+  <div class="container">
+    <a href="#"><img src="{{ url_for('static', filename='images/3.png') }}" alt="Imagem 1" class="image active"></a>
+    <a href="#"><img src="{{ url_for('static', filename='images/2.png') }}" alt="Imagem 2" class="image"></a>
+    <a href="#"><img src="{{ url_for('static', filename='images/1.png') }}" alt="Imagem 5" class="image"></a>
+    <!-- botões que trocam as imagens -->
+    <button class="button prev" onclick="prevImage()">◀</button>
+    <button class="button next" onclick="nextImage()">▶</button>
+  </div>
+
+
+
+
+
+
+  <div id="body303">
+    <!-- Seção do Versículo -->
+    <div class="container303">
+      <div class="versiculo-container303">
+        <div class="titulo303">Versículo do Dia</div>
+        <div id="paragrafo303" class="subtitulo303">Salmo 23:1</div>
+        <p id="paragrafo1303" class="texto303">O Senhor é o meu pastor; nada me faltará.</p>
+        <hr class="linha-horizontal303">
+        <!-- botão que realiza a troca de versículo -->
+        <div class="botoes303">
+          <button class="botao303 botao-ver303" onclick="sortearDados()">Ver outro versiculo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container303">
+      <!-- Linha vertical de divisão -->
+      <div class="linha-vertical303"></div>
+
+      <!-- Seção Nosso Propósito fora do retângulo -->
+      <div class="proposito-container303">
+        <div class="proposito-titulo303">Nosso Propósito</div>
+        <p class="proposito-texto303">
+          A igreja evangélica é fundamental na sociedade, oferecendo orientação espiritual e fortalecendo a fé de seus membros. Como espaço de acolhimento, promove apoio emocional e social, ajudando pessoas em situação de vulnerabilidade através de ações como doação de alimentos e assistência a famílias carentes. Ela também incentiva valores éticos e morais baseados nos ensinamentos bíblicos, influenciando positivamente o comportamento dos fiéis.
+        </p>
+        <p class="proposito-texto303">
+          Além disso, muitas igrejas evangélicas investem em projetos sociais, contribuindo para o bem-estar da comunidade com creches, escolas e clínicas de recuperação. Com a inclusão digital, a igreja amplia seu alcance, permitindo que pessoas distantes participem virtualmente de cultos e eventos. Assim, a igreja evangélica tem um impacto significativo ao promover valores, desenvolver ações de ajuda ao próximo e fortalecer laços comunitários, sendo uma presença positiva e influente tanto na vida pessoal dos membros quanto na sociedade.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- área da bíblia -->
+  <div class="retangulo" style="margin-top: 40px;">
+    <div class="conteudo-texto">
+      <div class="titulo">Bíblia</div>
+      <div class="texto">A leitura da Bíblia é crucial para os cristãos, pois oferece orientação espiritual, fortalece a fé, promove a paz interior e fornece uma base moral. Suas Escrituras ensinam valores como amor e perdão, unindo a comunidade em torno de crenças comuns e enriquecendo a vida pessoal e coletiva. Clique na imagem e escolha qual versão você quer ler.</div>
+    </div>
+    <!-- imagem clicável que direciona para a bíblia -->
+    <div class="conteudo-imagem">
+      <a href="/biblia"><img src="{{ url_for('static', filename='images/bibliaAzul.png') }}" alt="Imagem Descritiva"></a>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- área de ensino -->
+  <div class="container101">
+    <h1>Ensino Bíblico</h1>
+    <hr>
+    <p>Assim como o prudente busca o conhecimento e o sábio ouve o saber, dedicar-se ao aprendizado é uma jornada que fortalece a mente e eleva o espírito.</p>
+    <hr>
+
+    <div class="buttons101">
+      <!-- botões dos cursos -->
+      <button class="button101" onclick="toggleContent101(1)">Como ser Cristão</button>
+      <button class="button101" onclick="toggleContent101(2)">Panorama Bíblico</button>
+      <button class="button101" onclick="toggleContent101(3)">Teologia Básica</button>
+    </div>
+
+    <div class="extra-content101" id="extraContent101">
+      <hr>
+      <!-- conteúdo que é exibido quando clica em um botão de curso (esse titulo muda dependendo do botão clicável, essa troca é feito no javascript) -->
+      <h2 id="extraTitle101">Título Adicional</h2>
+      <p id="extraText101">Este é um conteúdo adicional exibido ao clicar nos botões. Ele desaparece ao clicar novamente.</p>
+      <a class="extra-button101" href="curso" style="text-decoration: none;">Área de Cursos</a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

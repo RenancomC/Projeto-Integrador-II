@@ -1,0 +1,33 @@
+{% extends 'base01.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title>HOME</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='louvor.css') }}">
+{% endblock %}
+
+{% block conteudo %}<!-- conteúdo que será exibido -->
+<div class="baseDeFundo">
+  <div class="container">
+    <!-- titulo da página-->
+    <h1 class="title">MINISTÉRIO DE LOUVOR</h1>
+
+    <div class="content">
+      <p>O Ministério de Louvor desempenha um papel fundamental na vida de uma igreja, pois ele ajuda a criar uma atmosfera de adoração que aproxima os membros de Deus. A música tem um poder único de expressar emoções profundas, conectar as pessoas com o divino e criar um ambiente propício para o culto. Durante os momentos de louvor, a congregação é convidada a refletir sobre a grandeza de Deus, a sua bondade e a sua misericórdia, promovendo um ambiente de rendição e humildade diante Dele.</p>
+    </div>
+
+    <div class="content">
+      <p>Além disso, o Ministério de Louvor também cumpre a função de ensino e edificação espiritual. Muitas das canções usadas nos cultos contêm letras baseadas nas Escrituras Sagradas, transmitindo mensagens de fé, esperança e amor. Através da música, os membros da igreja podem memorizar versículos bíblicos e fundamentos doutrinários importantes, o que contribui para o crescimento espiritual e a maturidade cristã da congregação. Assim, o louvor vai além do simples entretenimento, sendo uma ferramenta pedagógica que reforça a mensagem do evangelho.</p>
+      <img src="{{ url_for('static', filename='images/instrumento.png') }}" alt="Descrição da imagem direita">
+    </div>
+
+    <div class="content">
+      <img src="{{ url_for('static', filename='images/pessoaCartoon.png') }}" alt="Descrição da imagem esquerda">
+      <p>A união do Ministério de Louvor com a congregação também tem uma importância estratégica. O momento de louvor é um espaço em que a igreja se une em um só espírito, compartilhando a experiência de adorar a Deus coletivamente. Essa comunhão fortalece o vínculo entre os membros da igreja, criando uma identidade compartilhada e um sentido de pertencimento. O louvor, portanto, torna-se um instrumento de unidade, onde a diversidade de vozes e experiências se junta para glorificar o nome de Deus.</p>
+    </div>
+
+    <div class="content">
+      <p>Finalmente, o Ministério de Louvor é crucial para a presença de Deus em um culto. Muitos acreditam que a adoração sincera e fervorosa atrai a presença de Deus de maneira única. Em várias passagens bíblicas, a música é associada à manifestação de Deus entre o seu povo. Assim, o Ministério de Louvor é responsável por guiar a congregação em momentos de intimidade com o Senhor, permitindo uma experiência espiritual profunda que vai além da palavra falada, promovendo transformações e renovação na vida de cada membro da igreja.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

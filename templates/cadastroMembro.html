@@ -1,0 +1,43 @@
+{% extends 'base02.html' %} <!-- importa os blocos do arquivo base.html -->
+
+{% block estilo %} <!-- bloco de estilo e nome da página  -->
+<title></title>
+<link rel="stylesheet" href="{{ url_for('static', filename='cadastroMembro.css') }}">
+{% endblock %}
+
+{% block conteudo %} <!-- bloco de conteúdo da página  -->
+
+<div class="baseDeFundo">
+
+  <h1 style="margin-top: 25px; margin-bottom: 25px; text-decoration: underline;">CADASTRO DOS MEMBROS</h1>
+
+  <form action="/criacao" method="POST" style="margin: 30px;">
+    <!-- Dados pessoais -->
+    <label for="primeiro_nome">Primeiro Nome:</label><br>
+    <input type="text" id="primeiro_nome" name="nome" required><br><br>
+
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+    <div style="color: red; margin-top: -10px; margin-bottom: 5px;">
+      {% for msg in mensagens %}
+      {{ msg }}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <label for="cpf">CPF:</label><br>
+    <input type="text" id="cpf" name="cpf" required><br><br>
+
+    <label for="numero">Contato:</label><br>
+    <input type="text" id="numero" name="contato" required><br><br>
+
+    <label for="endereco">Endereço:</label><br>
+    <input type="text" id="endereco" name="endereco" required><br><br>
+
+    <button type="submit01">Salvar</button>
+  </form>
+
+</div>
+
+</div>
+{% endblock %}
